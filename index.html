@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Orders</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Customer Orders</h2>
+<button style="width: 110px;"><a href="dashboard.html" style="color: white;">Dashboard </a></button><br><br>
+<button onclick="openForm()" style="width: 110px;">Create Order</button>
+<br><br>
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Phone</th>
+<th>Email</th>
+<th>Qty</th>
+<th>Price</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="orders"></tbody>
+
+</table>
+
+<div id="formModal" class="modal">
+
+<div class="modal-content">
+
+<input id="first" placeholder="First Name">
+<input id="last" placeholder="Last Name">
+<input id="phone" placeholder="Phone">
+<input id="email" placeholder="Email">
+<input id="qty" placeholder="Quantity">
+<input id="price" placeholder="Price">
+
+<select id="status">
+<option>Paid</option>
+<option>Pending</option>
+</select>
+
+<button onclick="saveOrder()">Save</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

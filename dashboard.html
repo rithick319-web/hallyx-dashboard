@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
+<style>
+
+.chart-buttons{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.widgets{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.widget{
+background:white;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+height:300px;
+}
+
+.widget canvas{
+width:95% !important;
+height:87% !important;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Customer Dashboard Builder</h2>
+
+<button><a href="index.html" style="color: white;">Customer Orders </a></button>
+<br>
+<br>
+<div class="chart-buttons">
+
+<button onclick="addChart('bar')">▤ Bar Chart</button>
+<button onclick="addChart('pie')">◔ Pie Chart</button>
+<button onclick="addChart('line')">⤴ Line Chart</button>
+<button onclick="addChart('table')">☰ Table</button>
+
+</div>
+
+<div id="widgets" class="widgets"></div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
